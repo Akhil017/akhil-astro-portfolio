@@ -1,0 +1,59 @@
+---
+import Container from "./ui/Container.astro";
+import { Image } from "astro:assets";
+import profilePic from "@/assets/avatar.jpg";
+import Button from "./ui/Button.astro";
+import ButtonCta from "./ui/ButtonCta.astro";
+
+const menuitems = [
+  {
+    title: "About",
+    path: "#about",
+  },
+  {
+    title: "Experience",
+    path: "#experience",
+  },
+  {
+    title: "Projects",
+    path: "#project",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
+  },
+];
+---
+
+<header class="flex justify-between items-center">
+  <div>
+    <Image
+      src={profilePic}
+      alt={"akhil profile pic"}
+      class="w-10 h-10 rounded-full border-2 border-accent"
+    />
+  </div>
+  <div class="flex items-center gap-6">
+    <nav class="hidden md:block">
+      <ul class="flex lg:flex-row lg:gap-8">
+        {
+          menuitems.map((item, index) => (
+            <>
+              {
+                <li>
+                  <a
+                    href={item.path}
+                    class="flex lg:px-3 py-2 items-center text-slate-300 hover:text-gray-900"
+                  >
+                    <span> {item.title}</span>
+                  </a>
+                </li>
+              }
+            </>
+          ))
+        }
+      </ul>
+    </nav>
+    <ButtonCta variant="btn">Resume</ButtonCta>
+  </div>
+</header>

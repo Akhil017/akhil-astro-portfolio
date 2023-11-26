@@ -1,0 +1,24 @@
+---
+import Header from "./Header.astro";
+import ButtonCta from "./ui/ButtonCta.astro";
+import Container from "./ui/Container.astro";
+---
+
+<section class="bg-hero-pattern bg-cover bg-no-repeat h-[760px]">
+  <Container class="flex flex-col py-8 h-full">
+    <Header />
+    <div class="pt-32 flex-1 flex items-start justify-start flex-col">
+      <p class="text-3xl text-accent">hi there, I am</p>
+      <h1 class="text-[5rem] text-slate-300 font-bold">Akhil</h1>
+      <div class="text-[5rem] text-secondary font-bold leading-none">
+        <p>I build intutive <span class="text-accent">UI</span></p>
+        <p>Solutions</p>
+      </div>
+      <p class="max-w-xl text-slate-300 mt-5 leading-relaxeds font-medium">
+        I’m a software engineer specializing in building pixel perfect user
+        interface. Currently, I’m focused on building cool dashboards for IoT
+        applications at Intellicar Telematics.
+      </p>
+    </div>
+  </Container>
+</section>
