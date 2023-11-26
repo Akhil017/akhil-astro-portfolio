@@ -1,7 +1,35 @@
 ---
 import Container from "./ui/Container.astro";
+import SectionTitle from "./ui/SectionTitle.astro";
+import ListItem from "./ui/ListItem.astro";
+
+const skills = [
+  "Javascript (es6+)",
+  "RTL & Jest",
+  "Typescript",
+  "Webpack",
+  "React Js",
+  "Webpack",
+  "React Js",
+  "Astro Js",
+];
 ---
 
-<section class="h-[768px] bg-[#f0f0f0]">
-  <Container>About Me</Container>
+<section class="h-[768px] bg-[#f0f0f0] text-secondary" id="about">
+  <Container class="flex flex-col justify-center h-full">
+    <SectionTitle>About Me</SectionTitle>
+    <p class="max-w-xl mt-5 text-primary leading-relaxed font-medium">
+      Hello! I am Akhil, a passionate React developer with a keen eye for
+      crafting pixel-perfect UI experiences. My expertise extends to JavaScript,
+      HTML, CSS, and more, allowing me to bring web projects to life seamlessly.
+      I thrive on the challenge of turning creative ideas into functional and
+      visually appealing applications.
+    </p>
+    <p class="max-w-xl text-primary mt-5 leading-relaxed font-medium">
+      Here are a few technologies I’ve been working with recently:
+    </p>
+    <div class="mt-4 grid grid-cols-2 max-w-xl gap-2 font-medium">
+      {skills.map((skill) => <ListItem>{skill}</ListItem>)}
+    </div>
+  </Container>
 </section>
