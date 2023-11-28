@@ -2,6 +2,7 @@
 import Container from "./ui/Container.astro";
 import SectionTitle from "./ui/SectionTitle.astro";
 import ListItem from "./ui/ListItem.astro";
+import AboutRings from "./AboutRings.astro";
 
 const skills = [
   "Javascript (es6+)",
@@ -15,7 +16,7 @@ const skills = [
 ];
 ---
 
-<section class="h-screen bg-[#f0f0f0] text-secondary" id="about">
+<section class="h-screen bg-[#f0f0f0] text-secondary relative" id="about">
   <Container class="flex flex-col justify-center h-full">
     <SectionTitle>About Me</SectionTitle>
     <p class="max-w-xl mt-5 text-primary leading-relaxed font-medium">
@@ -31,5 +32,6 @@ const skills = [
     <div class="mt-4 grid grid-cols-2 max-w-xl gap-2 font-medium">
       {skills.map((skill) => <ListItem>{skill}</ListItem>)}
     </div>
+    <AboutRings />
   </Container>
 </section>
