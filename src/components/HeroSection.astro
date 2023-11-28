@@ -5,7 +5,7 @@ import Container from "./ui/Container.astro";
 ---
 
 <section class="bg-hero-pattern bg-cover bg-no-repeat h-screen">
-  <div class="blob"></div>
+  <div class="curso-spotlight"></div>
   <Container class="flex flex-col h-full">
     <Header />
     <div class="flex-1 flex items-start justify-center flex-col">
@@ -20,7 +20,7 @@ import Container from "./ui/Container.astro";
         <p>Solutions</p>
       </div>
       <p
-        class="max-w-xl text-slate-300 mt-5 leading-relaxed font-medium tracking-widest"
+        class="max-w-2xl text-slate-300 mt-5 leading-relaxed font-light tracking-widest"
       >
         I’m a software engineer specializing in building pixel perfect user
         interface. Currently, I’m focused on building cool dashboards for IoT
@@ -31,7 +31,8 @@ import Container from "./ui/Container.astro";
 </section>
 
 <script>
-  const cursor: HTMLDivElement | null = document.querySelector(".blob");
+  const cursor: HTMLDivElement | null =
+    document.querySelector(".curso-spotlight");
 
   document.addEventListener("mousemove", function (e) {
     const x = e.clientX;
