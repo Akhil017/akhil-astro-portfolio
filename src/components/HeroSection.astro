@@ -3,7 +3,7 @@ import Header from "./Header.astro";
 import Container from "./ui/Container.astro";
 ---
 
-<section class="bg-hero-pattern bg-cover bg-no-repeat h-screen relative">
+<section class="bg-hero-pattern bg-cover bg-no-repeat h-screen">
   <div class="curso-spotlight"></div>
   <Container class="flex flex-col h-full">
     <Header />
@@ -34,8 +34,6 @@ import Container from "./ui/Container.astro";
     document.querySelector(".curso-spotlight");
 
   document.addEventListener("mousemove", function (e) {
-    const x = e.clientX;
-    const y = e.clientY;
     if (cursor) {
       cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`;
     }
